@@ -1,3 +1,4 @@
+# Binary Search Tree Algorithm
 ## 1. State the problem clearly. Identify the input & output formats.
 Find the position of a given number in a list of numbers arranged by decreasing order. The list must be accessed a minimum number of times.
 
