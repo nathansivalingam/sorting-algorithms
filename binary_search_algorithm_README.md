@@ -29,13 +29,13 @@ Brute Force Solution
 
 ## 4. Implement the solution and test it using example inputs. Fix bugs, if any.
 ### Brute Force Linear Search Function (O(n))
-def linear_search_algo(data, number):
-    i = 0
-    while i < len(data):
-        if data[i] == number:
-            return i
-        i+=1
-    return -1
+    def linear_search_algo(data, number):
+        i = 0
+        while i < len(data):
+            if data[i] == number:
+                return i
+            i+=1
+        return -1
 
 ## 5. Analyze the algorithm's complexity and identify inefficiencies, if any.
 The linear search algorithm has a time complexity of O(n).
@@ -43,17 +43,16 @@ By using a binary search algorithm, the time complexity can be reduced to O(log 
 
 ## 6. Apply the right technique to overcome the inefficiency. Repeat steps 3 to 6.
 ### Binary Search Tree Function (O(log n))
-def bst_search_algo(data, number):
-    
-    left = 0
-    right = len(data) - 1
+    def bst_search_algo(data, number):
+        left = 0
+        right = len(data) - 1
 
-    while (left <= right):
-        mid = (right + left) // 2
-        if data[mid] == number:
-            return mid
-        elif data[mid] > number:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return -1
+        while (left <= right):
+            mid = (right + left) // 2
+            if data[mid] == number:
+                return mid
+            elif data[mid] > number:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return -1
