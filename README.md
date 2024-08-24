@@ -1,4 +1,4 @@
-# Sorting Algorithms - By Nathan Sivalingam
+# Sorting Algorithms
 This repository contains implementations of the following sorting algorithms:
 - Iterative Sorting Algorithm
 - Binary Search Tree
