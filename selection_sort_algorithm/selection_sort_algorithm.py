@@ -3,7 +3,7 @@ import time
 import selection_sort_tests
 tests = selection_sort_tests.tests
 
-# Bubble Sort Algorithm (O(n^2))
+# Selection Sort Algorithm (O(n^2))
 def selection_sort_algo(data):
     if len(data) == 0:
         return -1
@@ -16,7 +16,7 @@ def selection_sort_algo(data):
             while cur_item < len(data):
                 if data[cur_item] < data[cur_min]:
                     cur_min = cur_item    
-                cur_item+=1 # 1
+                cur_item+=1
             
             # Swaps
             tmp = data[i]
