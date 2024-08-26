@@ -15,7 +15,7 @@ def selection_sort_algo(data):
             cur_item = i
             while cur_item < len(data):
                 if data[cur_item] < data[cur_min]:
-                    cur_min = cur_item        
+                    cur_min = cur_item    
                 cur_item+=1 # 1
             
             # Swaps
