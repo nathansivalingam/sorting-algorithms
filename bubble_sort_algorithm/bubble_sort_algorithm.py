@@ -1,4 +1,5 @@
 # Test-Related Imports
+import time
 import bubble_sort_tests
 tests = bubble_sort_tests.tests
 
@@ -22,6 +23,9 @@ if __name__ == "__main__":
     RED = "\033[31m"
     GREEN = "\033[32m"
     RESET = "\033[0m"
+
+    # Begin Timer
+    start_time = time.time()
     
     # Test Iterations
     for test in tests:
@@ -33,3 +37,7 @@ if __name__ == "__main__":
             print(f"{GREEN} Test Passed{RESET}")
         else:
             print(f"{RED} Test Failed{RESET}")
+    
+    # End Timer
+    end_time = time.time()
+    print(f"Test run time: {round(((end_time - start_time) * 1000), 4)} ms")
