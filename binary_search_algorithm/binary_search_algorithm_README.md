@@ -77,3 +77,6 @@ However, while the resursive bst is easier to code/understand, it is less space 
             return bstr_search_algo(data, mid + 1, right, number)
 
 Resource: https://stackoverflow.com/questions/57481997/recursive-and-iterative-binary-search-which-one-is-more-efficient-and-why#:~:text=Focusing%20on%20space%20complexity%2C%20the,O(log%20n)%20space.&text=There%20is%20no%20different%20w.r.t%20Big%20O%20analysis%20between%20these%20two%20versions.
+
+Next Steps:
+- Finish up the merge sort algorithm and get to testing.
