@@ -27,6 +27,21 @@ def bst_search_algo(data, number):
             right = mid - 1
     return -1
 
+# Binary Search Tree Function Recursive
+def bstr_search_algo(data, left, right, number):
+
+    if left > right:
+        return -1
+
+    mid = (right + left) // 2
+
+    if data[mid] == number:
+        return mid
+    elif data[mid] < number:
+        return bstr_search_algo(data, left, mid - 1, number)
+    else:
+        return bstr_search_algo(data, mid + 1, right, number)
+
 # Main Function
 if __name__ == "__main__":
     
@@ -49,10 +64,18 @@ if __name__ == "__main__":
         else:
             print(f"{RED} LPI Test Failed{RESET}")
         
-        # Binary Search Tree Function
+        # Binary Search Tree Function (Iterative)
         bst_actual_output = bst_search_algo(data, number)
         
         if expected_output == bst_actual_output:
             print(f"{GREEN} BST Test Passed{RESET}")
         else:
             print(f"{RED} BST Test Failed{RESET}")
+
+        # Binary Search Tree Function (Recursive)
+        bstr_actual_output = bstr_search_algo(data, 0, len(data) - 1, number)
+        
+        if expected_output == bstr_actual_output:
+            print(f"{GREEN} BSTR Test Passed{RESET}")
+        else:
+            print(f"{RED} BSTR Test Failed{RESET}")
