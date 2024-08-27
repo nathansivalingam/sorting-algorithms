@@ -4,11 +4,16 @@ import merge_sort_tests
 tests = merge_sort_tests.tests
 
 # Merge Sort Algorithm (O(n log n))
-def merge_sort_algo(data):
-    if len(data) == 0:
-        return -1
-    else:
-        return data
+def mergesort(data, left, right): 
+    if left < right:
+        mid = (left + right) // 2
+        mergesort(data, left, mid)
+        mergesort(data, mid + 1, right)
+        merge(data, left, mid, right)
+
+def merge(data, left, mid, right):
+    # UP TO HERE
+    return -1
 
 # Main Function
 if __name__ == "__main__":
@@ -25,7 +30,7 @@ if __name__ == "__main__":
     for test in tests:
         data = test['input']
         expected_output = test['output']
-        actual_output = merge_sort_algo(data)
+        actual_output = mergesort(data, 0, len(data) - 1)
 
         if expected_output == actual_output:
             print(f"{GREEN} Test Passed{RESET}")
